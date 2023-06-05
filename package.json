@@ -24,7 +24,8 @@
     "electron:start": "concurrently -k \"cross-env BROWSER=none yarn start\" \"wait-on http://127.0.0.1:3000 && electronmon .\"",
     "electron:package:mac": "yarn build && electron-builder -m -c.extraMetadata.main=build/electron.js",
     "electron:package:win": "yarn build && electron-builder -w -c.extraMetadata.main=build/electron.js",
-    "electron:package:linux": "yarn build && electron-builder -l -c.extraMetadata.main=build/electron.js"
+    "electron:package:linux": "yarn build && electron-builder -l -c.extraMetadata.main=build/electron.js",
+    "release": "release-it"
   },
   "eslintConfig": {
     "extends": [
@@ -45,12 +46,16 @@
     "cross-env": "^7.0.3",
     "electron-builder": "^23.6.0",
     "electronmon": "^2.0.2",
+    "release-it": "^15.11.0",
     "wait-on": "^7.0.1"
   },
   "build": {
     "appId": "tk.minersonline.launcher",
     "productName": "Miners Online Launcher",
-    "files": ["build/**/*", "node_modules/**/*"],
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
     "directories": {
       "buildResources": "public"
     },

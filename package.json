@@ -2,7 +2,7 @@
   "name": "miners_online_launcher",
   "author": "ajh123",
   "description": "The launcher for all Miners Online applications",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "homepage": "./",
   "main": "public/electron.js",
